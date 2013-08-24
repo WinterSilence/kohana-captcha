@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined('SYSPATH') OR die('No direct script access.');
 /**
  * @package  Captcha
  *
@@ -16,22 +16,20 @@
  *  fonts		Font files
  *  promote		Valid response count threshold to promote user (FALSE to disable)
  */
-
 return array(
 	'default' => array(
-		'style'      	=> 'alpha',
-		'width'      	=> 150,
-		'height'     	=> 50,
-		'complexity' 	=> 4,
-		'background' 	=> '',
-		'fontpath'   	=> MODPATH.'captcha/fonts/',
-		'fonts'      	=> array('DejaVuSerif.ttf'),
-		'promote'    	=> FALSE,
+		'style'      => 'alpha',
+		'width'      => 150,
+		'height'     => 50,
+		'complexity' => rand(4,5),
+		'background' => '',
+		'fontpath'   => MODPATH.'captcha/fonts/',
+		'fonts'      => array('DejaVuSerif.ttf'),
+		'promote'    => FALSE,
 	),
 	// Words of varying length for Captcha_Word to pick from
 	// Note: all Unicode characters should work, but not everyone can type them, so be careful with that (no japanese/chinese captcha please ;))
-	'words' => array
-	(
+	'words' => array(
 		'cd', 'tv', 'it', 'to', 'be', 'or',
 		'sun', 'car', 'dog', 'bed', 'kid', 'egg',
 		'bike', 'tree', 'bath', 'roof', 'road', 'hair',
@@ -43,8 +41,7 @@ return array(
 	),
 	// Riddles for Captcha_Riddle to pick from
 	// Note: use only alphanumeric characters
-	'riddles' => array
-	(
+	'riddles' => array(
 		array('Do you hate spam? (yes or no)', 'yes'),
 		array('Are you a robot? (yes or no)', 'no'),
 		array('Fire is... (hot or cold)', 'hot'),
